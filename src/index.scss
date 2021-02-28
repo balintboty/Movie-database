@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  background-color: #172741;
+}
+
+header {
+  padding: 50px 15px 0;
+
+  h1 {
+    color: #FFFFFF;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 15px;
+}
+
+.searchbox {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: #EEE none;
+  border-radius: 8px;
+  color: #737780;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.4s ease-out;
+
+  &:focus {
+    box-shadow: 0px 0px 8px 3px #4484c4;
+  }
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+
+  .result {
+    width: 33.333%;
+    min-width: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    h3 {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 10px;
+      background: #445565;
+      flex: 1 1 100%;
+      transition: 0.4s ease-out;
+    }
+
+    &:hover {
+      h3 {
+        background: #FFF;
+        color: #223343;
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #445565;
+  overflow-y:  scroll;
+
+  .content {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px;
+
+    color: #FFF;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+
+      span{
+        font-weight: 300;
+        font-size: 20px;
+      }
+    }
+    .rating{
+      margin-bottom: 30px;
+    }
+
+    .plot{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -15px 30px;
+
+      img{
+        flex: 1 1 50%;
+        max-width: 300px;
+        padding: 0px 15px;
+      }
+
+      p{
+        flex: 1 1 50%;
+        padding: 15px;
+      }
+
+      .close{
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: 700;
+
+        background-color: #4484c4;
+        color: #FFF;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+
+        transition: 0.4s ease-out;
+
+        &:hover{
+          background: #223343;
+        }
+      }
+    }
+  }
+}
